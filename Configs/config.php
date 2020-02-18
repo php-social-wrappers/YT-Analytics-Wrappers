@@ -18,3 +18,9 @@ if(!defined("MODELS_PATH")){
 if(!defined("BASEPATH")){
     define("BASEPATH",  dirname(__DIR__) . DIRECTORY_SEPARATOR );
 }
+
+
+
+spl_autoload_register(function ($class) {
+    include SYSTEM_PATH.'classes/' . $class . '.class.php';
+});
